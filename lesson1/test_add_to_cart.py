@@ -14,8 +14,13 @@ def test_add_item_in_the_cart():
 
     login_button = driver.find_element(By.XPATH, '//input[@data-test="login-button"]')
     login_button.click()
+    time.sleep(3)
 
-    text_before = driver.find_element(By.CSS_SELECTOR, "a[id='item_4_title_link'] > div[class='inventory_item_name']").text
+    # text_before = driver.find_element(By.CSS_SELECTOR, "a[id='item_4_title_link']>div[class='inventory_item_name']").text
+    # print(text_before)
+
+    text_before = driver.find_element(By.CSS_SELECTOR, "#item_4_title_link div").text
+    print(text_before)
 
     button = driver.find_element(By.CSS_SELECTOR, "button[data-test='add-to-cart-sauce-labs-backpack']")
     button.click()
