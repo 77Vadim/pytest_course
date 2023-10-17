@@ -1,6 +1,4 @@
-from selenium import webdriver
 from selenium.webdriver.common.by import By
-import time
 
 
 def test_add_item_in_the_cart(driver, authorization):

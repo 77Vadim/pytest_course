@@ -1,7 +1,4 @@
-from selenium import webdriver
 from selenium.webdriver.common.by import By
-import time 
-
 
 def test_login_form(driver):
     username_field = driver.find_element(By.XPATH, '//input[@data-test="username"]')
