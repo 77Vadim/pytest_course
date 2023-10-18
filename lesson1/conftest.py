@@ -24,3 +24,8 @@ def authorization(driver):
 
     login_button = driver.find_element(By.XPATH, '//input[@data-test="login-button"]')
     login_button.click()
+
+@pytest.fixture(scope="function")
+def cart(driver, authorization):
+    driver.find_element(By.CSS_SELECTOR, "a[class='shopping_cart_link']").click()
+

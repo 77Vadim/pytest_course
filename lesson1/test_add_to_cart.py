@@ -13,4 +13,3 @@ def test_add_item_in_the_cart(driver, authorization):
 
     text_after = driver.find_element(By.CSS_SELECTOR, "a[id='item_4_title_link'] > div[class='inventory_item_name']").text
     assert text_before == text_after
-
